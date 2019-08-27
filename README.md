@@ -8,6 +8,7 @@ Segue um pequeno passo a passo:
 3 - Em Form1() adicionar timer.Enabled = true;
 4 - Adicionar o evento timer_Tick
 	4.1  Código a ser adicionado dentro do evento:
+	```C#
 	        foreach (var port in SerialPort.GetPortNames())
             {
         	    if (!comPortsCombobox.Items.Contains(port)) //mesma coisa que comPortsCombobox.Items.Contains(port) == false 
@@ -15,6 +16,7 @@ Segue um pequeno passo a passo:
                     comPortsCombobox.Items.Add(port);
                 }
             }
+	    ```
 5 - Criar uma porta serial como variável global
 	SerialPort serialport = new SerialPort();
 	5.1 Criar uma constante para o baudrate
